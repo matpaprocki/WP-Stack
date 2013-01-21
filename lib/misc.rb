@@ -7,3 +7,9 @@ def loadFile file
 		exit 1
 	end
 end
+
+def relative_path(from_str, to_str)
+    require 'pathname'
+
+    Pathname.new(to_str).relative_path_from(Pathname.new(from_str)).to_s
+end
